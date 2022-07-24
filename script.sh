@@ -38,6 +38,6 @@ kubectl create -f ./kubeconfig/api-deployment.json # kubectl delete deployment a
 kubectl get deployment
 kubectl get pod
 kubectl describe deployment api-heroes
-kubectl describe pod api-heroes-8455d6fc9c-b9krk # this pod id is random
-kubectl logs api-heroes-8455d6fc9c-b9krk # this pod id is random
-kubectl logs -f api-heroes-8455d6fc9c-b9krk # this pod id is random
+kubectl describe pod api-heroes-8455d6fc9c-b9kjn # this pod id is random
+kubectl logs api-heroes-8455d6fc9c-b9kjn # this pod id is random
+kubectl logs -f api-heroes-8455d6fc9c-b9kjn # this pod id is random
