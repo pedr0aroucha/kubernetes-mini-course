@@ -39,3 +39,5 @@ kubectl get deployment
 kubectl get pod
 kubectl describe deployment api-heroes
 kubectl describe pod api-heroes-8455d6fc9c-b9krk # this pod id is random
+kubectl logs api-heroes-8455d6fc9c-b9krk # this pod id is random
+kubectl logs -f api-heroes-8455d6fc9c-b9krk # this pod id is random
