@@ -2,7 +2,7 @@
   "apiVersion": "apps/v1",
   "kind": "StatefulSet",
   "metadata": {
-    "name": "postgres",
+    "name": "postgres-sts",
     "labels": {
       "app": "postgres"
     }
@@ -45,7 +45,7 @@
             "env": [
               {
                 "name": "POSTGRES_PASSWORD",
-                "value": "mysecretpassword"
+                "value": "mySecretPassword"
               },
               {
                 "name": "POSTGRES_DB",

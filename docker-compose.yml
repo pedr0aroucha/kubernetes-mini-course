@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   api-heroes-postgres:
     container_name: api-heroes-postgres
@@ -6,9 +6,9 @@ services:
     ports:
       - 3000:3000
     environment:
-      POSTGRES_HOST: postgres:mysecretpassword@postgres:5432
+      POSTGRES_HOST: postgres:mySecretPassword@postgres:5432
       PORT: 3000
-      
+
     depends_on:
       - postgres
     links:
@@ -21,5 +21,5 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_PASSWORD: mySecretPassword
       POSTGRES_DB: heroes

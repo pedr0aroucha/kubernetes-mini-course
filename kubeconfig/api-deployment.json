@@ -1,0 +1,54 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "api-heroes",
+    "labels": {
+      "app": "api-heroes"
+    }
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "matchLabels": {
+        "app": "api-heroes"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "api-heroes"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "api-heroes",
+            "image": "pedr0aroucha/nodejs-with-postgres-api-example",
+            "ports": [
+              {
+                "containerPort": 4000,
+                "protocol": "TCP"
+              }
+            ],
+            "env": [
+              {
+                "name": "POSTGRES_HOST",
+                "value": "postgres:mySecretPassword@postgres-svc"
+              },
+              {
+                "name": "POSTGRES_DB",
+                "value": "heroes"
+              },
+
+              {
+                "name": "PORT",
+                "value": "4000"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
